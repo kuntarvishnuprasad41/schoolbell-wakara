@@ -37,7 +37,7 @@ class CardContainerTest {
         }
 
         // Then
-        onNodeWithText(text = "No alarms to display").assertIsDisplayed()
+        onNodeWithText(text = "No Bells to display").assertIsDisplayed()
     }
 
     @Test

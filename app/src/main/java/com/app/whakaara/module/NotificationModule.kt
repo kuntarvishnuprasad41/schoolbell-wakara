@@ -60,7 +60,7 @@ class NotificationModule {
     }
 
     @Provides
-    @Named("alarm")
+    @Named("Bell")
     fun provideNotificationBuilder(
         @ApplicationContext
         context: Context

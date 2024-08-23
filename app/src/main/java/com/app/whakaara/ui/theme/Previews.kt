@@ -21,7 +21,7 @@ class BooleanPreviewProvider : PreviewParameterProvider<Boolean> {
 }
 
 class RoutePreviewProvider : PreviewParameterProvider<String> {
-    override val values = sequenceOf("alarm", "timer")
+    override val values = sequenceOf("Bell", "timer")
 }
 
 class AlarmPreviewProvider : PreviewParameterProvider<Alarm> {

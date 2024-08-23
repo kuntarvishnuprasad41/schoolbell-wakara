@@ -112,19 +112,17 @@ fun AlarmSettings(
     )
 
     SettingsListDropdown(
-        modifier = Modifier
-            .height(space80)
-            .testTag("alarm gradual dropdown"),
-        state = rememberIntSettingState(defaultValue = preferencesState.preferences.gradualSoundDuration.ordinal),
-        title = { Text(text = stringResource(id = R.string.settings_screen_gradual_volume_increase_title)) },
-        subtitle = { Text(text = stringResource(id = R.string.settings_screen_gradual_volume_increase_subtitle)) },
-        items = GradualSoundDuration.entries.map { context.getString(it.getStringResource(it.ordinal)) },
+        modifier = Modifier.height(space80),
+        state = rememberIntSettingState(defaultValue = SettingsTime.FIVE_SECONDS.ordinal),
+        title = { Text(text = stringResource(id = R.string.settings_screen_auto_silence_title)) },
+        subtitle = { Text(text = stringResource(id = R.string.settings_screen_auto_silence_subtitle)) },
+        items = SettingsTime.entries.map { context.getString(it.getStringResource(it.ordinal)) },
         onItemSelected = { int, _ ->
-            val selection = GradualSoundDuration.fromOrdinalInt(value = int)
-            if (selection != preferencesState.preferences.gradualSoundDuration) {
+            val selection = SettingsTime.fromOrdinalInt(value = int)
+            if (selection != preferencesState.preferences.autoSilenceTime) {
                 updatePreferences(
                     preferencesState.preferences.copy(
-                        gradualSoundDuration = selection
+                        autoSilenceTime = selection
                     )
                 )
             }
@@ -162,7 +160,7 @@ fun AlarmSettings(
     SettingsListDropdown(
         modifier = Modifier
             .height(space80)
-            .testTag(tag = "alarm vibrate drop down"),
+            .testTag(tag = "Bell vibrate drop down"),
         enabled = preferencesState.preferences.isVibrateEnabled,
         state = rememberIntSettingState(defaultValue = preferencesState.preferences.vibrationPattern.value),
         title = { Text(text = stringResource(id = R.string.settings_screen_vibrate_pattern_title)) },
@@ -266,7 +264,7 @@ fun AlarmSettings(
 
     SettingsListDropdown(
         modifier = Modifier.height(space80),
-        state = rememberIntSettingState(defaultValue = preferencesState.preferences.autoSilenceTime.ordinal),
+        state = rememberIntSettingState(defaultValue = SettingsTime.TEN_SECONDS.ordinal),
         title = { Text(text = stringResource(id = R.string.settings_screen_auto_silence_title)) },
         subtitle = { Text(text = stringResource(id = R.string.settings_screen_auto_silence_subtitle)) },
         items = SettingsTime.entries.map { context.getString(it.getStringResource(it.ordinal)) },

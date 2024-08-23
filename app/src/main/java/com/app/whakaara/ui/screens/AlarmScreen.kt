@@ -4,6 +4,7 @@ import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
@@ -22,11 +23,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.app.whakaara.R
 import com.app.whakaara.state.PreferencesState
 import com.app.whakaara.state.events.AlarmEventCallbacks
@@ -67,6 +73,10 @@ fun AlarmScreen(
         }
     }
 
+    // Filter alarms based on the repeatDaily property and the daysOfWeek list
+    val dailyAlarms = alarms.filter { it.repeatDaily || it.daysOfWeek.size == 5 }
+    val nonDailyAlarms = alarms.filter { !it.repeatDaily && it.daysOfWeek.size != 5 }
+
     Scaffold(
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState)
@@ -106,17 +116,52 @@ fun AlarmScreen(
         },
         floatingActionButtonPosition = FabPosition.Center
     ) { innerPadding ->
-        CardContainerSwipeToDismiss(
-            modifier = Modifier.padding(innerPadding),
-            alarms = alarms,
-            timeFormat = preferencesState.preferences.timeFormat,
-            delete = alarmEventCallbacks::delete,
-            disable = alarmEventCallbacks::disable,
-            enable = alarmEventCallbacks::enable,
-            reset = alarmEventCallbacks::reset,
-            getInitialTimeToAlarm = alarmEventCallbacks::getInitialTimeToAlarm,
-            getTimeUntilAlarmFormatted = alarmEventCallbacks::getTimeUntilAlarmFormatted
-        )
+        Column(modifier = Modifier.padding(innerPadding)) {
+            // Section for daily alarms
+            Text(
+                text = "Daily Bells",
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 2.dp),
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                fontSize = 18.sp,
+                overflow = TextOverflow.Ellipsis
+            )
+            CardContainerSwipeToDismiss(
+                modifier = Modifier.padding(bottom = 16.dp),
+                alarms = dailyAlarms,
+                timeFormat = preferencesState.preferences.timeFormat,
+                delete = alarmEventCallbacks::delete,
+                disable = alarmEventCallbacks::disable,
+                enable = alarmEventCallbacks::enable,
+                reset = alarmEventCallbacks::reset,
+                getInitialTimeToAlarm = alarmEventCallbacks::getInitialTimeToAlarm,
+                getTimeUntilAlarmFormatted = alarmEventCallbacks::getTimeUntilAlarmFormatted
+            )
+
+            // Section for non-daily alarms
+            Text(
+                text = "Other Bells",
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 2.dp),
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                fontSize = 18.sp,
+                overflow = TextOverflow.Ellipsis
+            )
+            CardContainerSwipeToDismiss(
+                alarms = nonDailyAlarms,
+                timeFormat = preferencesState.preferences.timeFormat,
+                delete = alarmEventCallbacks::delete,
+                disable = alarmEventCallbacks::disable,
+                enable = alarmEventCallbacks::enable,
+                reset = alarmEventCallbacks::reset,
+                getInitialTimeToAlarm = alarmEventCallbacks::getInitialTimeToAlarm,
+                getTimeUntilAlarmFormatted = alarmEventCallbacks::getTimeUntilAlarmFormatted
+            )
+        }
 
         AnimatedVisibility(isDialogShown.value) {
             TimePickerDialog(

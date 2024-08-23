@@ -1,32 +1,32 @@
 <resources>
-    <string name="app_name">whakaara</string>
+    <string name="app_name">AUPS_BELL_SYSTEM</string>
     <string name="time_picker_dialog_title">Select time</string>
 
     <string name="permission_prompt_message">Notification permission required</string>
     <string name="permission_prompt_action_label">Go to settings</string>
 
-    <string name="bottom_sheet_title">Edit alarm</string>
+    <string name="bottom_sheet_title">Edit Bell</string>
     <string name="bottom_sheet_sub_title">Off</string>
     <string name="bottom_sheet_snooze_switch">Snooze</string>
-    <string name="bottom_sheet_snooze_switch_sub_title">Snooze on alarm</string>
+    <string name="bottom_sheet_snooze_switch_sub_title">Snooze on Bell</string>
     <string name="bottom_sheet_vibration_switch">Vibrate</string>
-    <string name="bottom_sheet_vibration_switch_sub_title">Vibrate on alarm</string>
+    <string name="bottom_sheet_vibration_switch_sub_title">Vibrate on Bell</string>
     <string name="bottom_sheet_delete_switch">Single-use</string>
-    <string name="bottom_sheet_delete_switch_sub_title">Alarm will delete after going off</string>
+    <string name="bottom_sheet_delete_switch_sub_title">Bell will delete after going off</string>
     <string name="bottom_sheet_save_button">Save</string>
     <string name="bottom_sheet_close_button">Cancel</string>
-    <string name="bottom_sheet_title_time_until_alarm">Alarm in %1$s:%2$s</string>
+    <string name="bottom_sheet_title_time_until_alarm">Bell in %1$s:%2$s</string>
     <string name="bottom_sheet_content_alarm_title">Title</string>
-    <string name="bottom_sheet_icon_cancel_content_description">Cancel alarm changes</string>
-    <string name="bottom_sheet_icon_save_content_description">Save alarm changes</string>
+    <string name="bottom_sheet_icon_cancel_content_description">Cancel Bell changes</string>
+    <string name="bottom_sheet_icon_save_content_description">Save Bell changes</string>
     <string name="bottom_sheet_repeat_switch_title">Repeating</string>
-    <string name="bottom_sheet_repeat_switch_sub_title">Alarm will repeat daily</string>
+    <string name="bottom_sheet_repeat_switch_sub_title">Bell will repeat daily</string>
     <string name="bottom_sheet_custom_alarm_days_title">Custom</string>
-    <string name="bottom_sheet_custom_alarm_days_sub_title">Select certain days to repeat alarm</string>
+    <string name="bottom_sheet_custom_alarm_days_sub_title">Select certain days to repeat Bell</string>
     <string name="bottom_sheet_title_characters">%1$d / %2$d</string>
 
     <string name="card_alarm_sub_title_off">Off</string>
-    <string name="card_repeat_daily_icon_content_description">Repeat alarm daily icon</string>
+    <string name="card_repeat_daily_icon_content_description">Repeat Bell daily icon</string>
     <string name="card_alarm_single_shot_content_description">Delete after goes off icon</string>
 
     <string name="notification_action_deleted">%1$s deleted</string>
@@ -39,16 +39,16 @@
 
     <string name="notification_sub_text">Tap to dismiss</string>
 
-    <string name="alarm_screen_empty_list">No alarms to display</string>
+    <string name="alarm_screen_empty_list">No Bells to display</string>
 
-    <string name="floating_action_button_icon_description">Create alarm</string>
+    <string name="floating_action_button_icon_description">Create Bell</string>
     <string name="delete_icon_content_description">Delete icon</string>
     <string name="pause_timer_icon_content_description">Pause timer icon button</string>
     <string name="start_timer_icon_content_description">Start timer icon button</string>
     <string name="stop_timer_icon_content_description">Stop timer icon button</string>
     <string name="lap_reset_icon_content_description">Extra fab icon button</string>
     <string name="system_time_icon_content_description">System time</string>
-    <string name="settings_icon_content_description">Alarm settings icon</string>
+    <string name="settings_icon_content_description">Bell settings icon</string>
     <string name="timer_countdown_finish_time_icon_content_description">Timer finish time icon</string>
     <string name="settings_screen_battery_optimization_icon_content_description">Battery optimization icon</string>
 
@@ -58,39 +58,39 @@
     <string name="settings_screen_system_time">Edit system time</string>
     <string name="settings_screen_app_settings">App settings</string>
     <string name="settings_screen_battery_optimization">Battery optimization</string>
-    <string name="settings_screen_alarm_settings_title">Alarm Settings</string>
+    <string name="settings_screen_alarm_settings_title">Bell Settings</string>
     <string name="settings_screen_vibrate_title">Vibrate</string>
-    <string name="settings_screen_vibrate_subtitle">Vibrate when alarms go off</string>
+    <string name="settings_screen_vibrate_subtitle">Vibrate when Bells go off</string>
     <string name="settings_screen_timer_vibrate_subtitle">Vibrate when timer goes off</string>
     <string name="settings_screen_vibrate_pattern_title">Vibration pattern</string>
     <string name="settings_screen_snooze_title">Snooze</string>
-    <string name="settings_screen_snooze_subtitle">Allow alarms to be snoozed</string>
+    <string name="settings_screen_snooze_subtitle">Allow Bells to be snoozed</string>
     <string name="settings_screen_delete_title">Delete</string>
-    <string name="settings_screen_delete_subtitle">Alarms are deleted after they go off</string>
+    <string name="settings_screen_delete_subtitle">Bells are deleted after they go off</string>
     <string name="settings_screen_snooze_duration_title">Snooze duration</string>
     <string name="settings_screen_auto_silence_title">Auto silence</string>
-    <string name="settings_screen_auto_silence_subtitle">Set time after which alarms will be silenced</string>
+    <string name="settings_screen_auto_silence_subtitle">Set time after which Bell will be silenced</string>
     <string name="settings_screen_24_hour_format_title">24 hour format</string>
     <string name="settings_screen_24_hour_format_subtitle">If enabled, display using 24 hour format</string>
     <string name="settings_screen_ringtone_selection_icon">Select ringtone</string>
-    <string name="settings_screen_ringtone_alarm_title">Select alarm sound</string>
+    <string name="settings_screen_ringtone_alarm_title">Select Bell sound</string>
     <string name="settings_screen_ringtone_timer_title">Select timer sound</string>
     <string name="settings_screen_ringtone_subtitle">Current:</string>
     <string name="settings_screen_app_theme_title">App Theme</string>
     <string name="settings_screen_add_widget_title">Create widget</string>
-    <string name="settings_screen_add_widget_subtitle">Display next alarm in a widget</string>
-    <string name="settings_screen_add_widget_icon">Add widget next alarm icon</string>
+    <string name="settings_screen_add_widget_subtitle">Display next Bell in a widget</string>
+    <string name="settings_screen_add_widget_icon">Add widget next Bell icon</string>
     <string name="settings_screen_timer_settings_title">Timer settings</string>
     <string name="settings_screen_sort_alarm_list_title">Next enabled</string>
-    <string name="settings_screen_sort_alarm_list_sub_title">Sort alarms by next enabled</string>
-    <string name="settings_screen_upcoming_alarm_notification_title">Upcoming alarm</string>
-    <string name="settings_screen_upcoming_alarm_notification_subtitle">Receive a notification before each alarm</string>
-    <string name="settings_screen_upcoming_alarm_notification_time_title">Upcoming alarm time</string>
-    <string name="settings_screen_upcoming_alarm_notification_time_subtitle">Time before alarm to display notification</string>
+    <string name="settings_screen_sort_alarm_list_sub_title">Sort Bell by next enabled</string>
+    <string name="settings_screen_upcoming_alarm_notification_title">Upcoming Bell</string>
+    <string name="settings_screen_upcoming_alarm_notification_subtitle">Receive a notification before each Bell</string>
+    <string name="settings_screen_upcoming_alarm_notification_time_title">Upcoming Bell time</string>
+    <string name="settings_screen_upcoming_alarm_notification_time_subtitle">Time before Bell to display notification</string>
     <string name="settings_screen_dynamic_theme_title">Dynamic theming</string>
     <string name="settings_screen_dynamic_theme_subtitle">Use a color scheme based on your wallpaper</string>
-    <string name="settings_screen_alarm_volume_icon">Alarm volume slider icon</string>
-    <string name="settings_screen_alarm_volume_title">Alarm volume: %1$d</string>
+    <string name="settings_screen_alarm_volume_icon">Bell volume slider icon</string>
+    <string name="settings_screen_alarm_volume_title">Bell volume: %1$d</string>
     <string name="settings_screen_auto_restart_timer_title">Auto-restart</string>
     <string name="settings_screen_auto_restart_timer_subtitle">Timer automatically restarts on click</string>
     <string name="settings_screen_gradual_volume_increase_title">Gentle rise</string>
@@ -104,8 +104,8 @@
     <string name="timer_notification_action_label">Stop</string>
     <string name="timer_screen_paused">Paused</string>
 
-    <string name="shortcut_alarm_short_label">Alarm</string>
-    <string name="shortcut_alarm_long_label">Create alarm</string>
+    <string name="shortcut_alarm_short_label">Bell</string>
+    <string name="shortcut_alarm_long_label">Create Bell</string>
     <string name="shortcut_timer_short_label">Timer</string>
     <string name="shortcut_timer_long_label">Start timer</string>
     <string name="shortcut_stopwatch_short_label">Stopwatch</string>
@@ -115,13 +115,13 @@
     <string name="timer_notification_sub_text_active">Time left</string>
     <string name="timer_notification_title_paused">Timer paused</string>
     <string name="notification_sub_text_paused">Paused</string>
-    <string name="upcoming_alarm_notification_content_title">Upcoming alarm</string>
-    <string name="upcoming_alarm_notification_sub_text">Time to alarm</string>
+    <string name="upcoming_alarm_notification_content_title">Upcoming Bell</string>
+    <string name="upcoming_alarm_notification_sub_text">Time to Bell</string>
 
 
-    <string name="widget_next_alarm_description">Shows next active alarm</string>
-    <string name="widget_next_alarm_icon_description">Alarm icon</string>
-    <string name="widget_next_alarm_title">Next alarm</string>
+    <string name="widget_next_alarm_description">Shows next active Bell</string>
+    <string name="widget_next_alarm_icon_description">Bell icon</string>
+    <string name="widget_next_alarm_title">Next Bell</string>
     <string name="widget_next_alarm_none">None set</string>
     <string name="widget_next_alarm_preview_time">12:59PM</string>
     <string name="widget_next_alarm_preview_title">Wake up now!</string>
@@ -138,7 +138,7 @@
     <string name="onboarding_button_complete">Complete</string>
     <string name="onboarding_widget_title">Widget</string>
     <string name="onboarding_widget_button">Create widget</string>
-    <string name="onboarding_widget_sub_text">This app supports displaying your next scheduled alarm in a widget</string>
+    <string name="onboarding_widget_sub_text">This app supports displaying your next scheduled Bell in a widget</string>
     <string name="onboarding_widget_sub_text_second">Try adding it to the home screen and using it!</string>
     <string name="onboarding_battery_title">Battery</string>
     <string name="onboarding_battery_sub_text">This app requires unrestricted battery settings, otherwise certain functionality may not work as expected!</string>
@@ -147,16 +147,16 @@
     <string name="onboarding_notification_button_not_enabled">Enable notifications</string>
     <string name="onboarding_notification_title">Notifications</string>
     <string name="onboarding_sub_text">This app requires permission to send you notifications!</string>
-    <string name="onboarding_welcome_title">Welcome to whakaara</string>
+    <string name="onboarding_welcome_title">Welcome to A.U.P.S. Kuntar</string>
     <string name="onboarding_welcome_sub_text">This screen will guide you through the most important setup steps</string>
-    <string name="onboarding_welcome_icon_description">whakaara app icon</string>
+    <string name="onboarding_welcome_icon_description">AUPS app icon</string>
 
     <string name="notification_timer_play_action_label">Resume</string>
     <string name="notification_timer_pause_action_label">Pause</string>
     <string name="notification_timer_stop_action_label">Stop</string>
     <string name="notification_upcoming_alarm_cancel">Cancel</string>
 
-    <string name="time_until_alarm_formatted_prefix">Alarm in</string>
+    <string name="time_until_alarm_formatted_prefix">Bell in</string>
 
     <string name="alarm_less_than_one_minute">less than 1 minute</string>
 </resources>

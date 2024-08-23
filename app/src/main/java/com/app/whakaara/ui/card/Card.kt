@@ -139,7 +139,7 @@ fun Card(
             Switch(
                 modifier = Modifier
                     .padding(end = space20)
-                    .testTag("alarm switch"),
+                    .testTag("Bell switch"),
                 checked = valueSlider,
                 onCheckedChange = {
                     if (!it) {

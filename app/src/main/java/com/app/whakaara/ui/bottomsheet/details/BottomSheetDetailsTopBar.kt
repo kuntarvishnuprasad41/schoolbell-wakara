@@ -52,7 +52,7 @@ private fun BottomSheetTitle(
     ) {
         Text(
             text = if (!title.isNullOrBlank()) {
-                title.toString()
+               "School Bell"
             } else {
                 stringResource(id = R.string.bottom_sheet_title)
             }

@@ -7,6 +7,13 @@
     <string name="settings_screen_gradual_volume_sixty_seconds">60 seconds</string>
 
     <string name="settings_screen_time_one_minute">1 minute</string>
+    <string name="settings_screen_time_two_seconds">2 seconds</string>
+    <string name="settings_screen_time_five_seconds">5 seconds</string>
+    <string name="settings_screen_time_seven_seconds">7 seconds</string>
+    <string name="settings_screen_time_nine_seconds">9 seconds</string>
+    <string name="settings_screen_time_ten_seconds">10 seconds</string>
+    <string name="settings_screen_time_twelve_seconds">12 seconds</string>
+    <string name="settings_screen_time_fifteen_seconds">15 seconds</string>
     <string name="settings_screen_time_five_minutes">5 minutes</string>
     <string name="settings_screen_time_ten_minutes">10 minutes</string>
     <string name="settings_screen_time_fifteen_minutes">15 minutes</string>

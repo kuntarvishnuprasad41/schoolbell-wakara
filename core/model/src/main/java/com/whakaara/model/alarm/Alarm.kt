@@ -6,7 +6,7 @@ import java.util.UUID
 data class Alarm(
     var alarmId: UUID = UUID.randomUUID(),
     var date: Calendar,
-    var title: String = "Alarm",
+    var title: String = "Bell",
     var subTitle: String,
     var vibration: Boolean = true,
     var isEnabled: Boolean = true,

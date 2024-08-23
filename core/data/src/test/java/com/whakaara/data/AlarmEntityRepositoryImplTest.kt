@@ -147,7 +147,7 @@ class AlarmEntityRepositoryImplTest {
         coVerify(atLeast = 1) { alarmDao.updateAlarm(capture(alarmEntitySlot)) }
         with(alarmEntitySlot.captured) {
             assertEquals(UUID.fromString("19de4fcc-1c68-485c-b817-0290faec649d"), alarmId)
-            assertEquals("Alarm", title)
+            assertEquals("Bell", title)
             assertEquals("subTitle", subTitle)
             assertEquals(true, isEnabled)
         }

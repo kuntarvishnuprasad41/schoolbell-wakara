@@ -88,43 +88,43 @@ fun NavGraph(
             }
         }
 
-        composable(
-            route = BottomNavItem.Timer.route,
-            deepLinks = listOf(
-                navDeepLink {
-                    uriPattern = DEEPLINK_TIMER
-                }
-            )
-        ) {
-            TimerScreen(
-                timerState = timerState,
-                updateHours = timerEventCallbacks::updateHours,
-                updateMinutes = timerEventCallbacks::updateMinutes,
-                updateSeconds = timerEventCallbacks::updateSeconds,
-                startTimer = timerEventCallbacks::startTimer,
-                stopTimer = timerEventCallbacks::stopTimer,
-                pauseTimer = timerEventCallbacks::pauseTimer,
-                restartTimer = timerEventCallbacks::restartTimer,
-                timeFormat = preferencesState.preferences.timeFormat,
-                autoRestartTimer = preferencesState.preferences.autoRestartTimer
-            )
-        }
+//        composable(
+//            route = BottomNavItem.Timer.route,
+//            deepLinks = listOf(
+//                navDeepLink {
+//                    uriPattern = DEEPLINK_TIMER
+//                }
+//            )
+//        ) {
+//            TimerScreen(
+//                timerState = timerState,
+//                updateHours = timerEventCallbacks::updateHours,
+//                updateMinutes = timerEventCallbacks::updateMinutes,
+//                updateSeconds = timerEventCallbacks::updateSeconds,
+//                startTimer = timerEventCallbacks::startTimer,
+//                stopTimer = timerEventCallbacks::stopTimer,
+//                pauseTimer = timerEventCallbacks::pauseTimer,
+//                restartTimer = timerEventCallbacks::restartTimer,
+//                timeFormat = preferencesState.preferences.timeFormat,
+//                autoRestartTimer = preferencesState.preferences.autoRestartTimer
+//            )
+//        }
 
-        composable(
-            route = BottomNavItem.Stopwatch.route,
-            deepLinks = listOf(
-                navDeepLink {
-                    uriPattern = DEEPLINK_STOPWATCH
-                }
-            )
-        ) {
-            StopwatchScreen(
-                stopwatchState = stopwatchState,
-                onStart = stopwatchEventCallbacks::startStopwatch,
-                onPause = stopwatchEventCallbacks::pauseStopwatch,
-                onStop = stopwatchEventCallbacks::stopStopwatch,
-                onLap = stopwatchEventCallbacks::lapStopwatch
-            )
-        }
+//        composable(
+//            route = BottomNavItem.Stopwatch.route,
+//            deepLinks = listOf(
+//                navDeepLink {
+//                    uriPattern = DEEPLINK_STOPWATCH
+//                }
+//            )
+//        ) {
+//            StopwatchScreen(
+//                stopwatchState = stopwatchState,
+//                onStart = stopwatchEventCallbacks::startStopwatch,
+//                onPause = stopwatchEventCallbacks::pauseStopwatch,
+//                onStop = stopwatchEventCallbacks::stopStopwatch,
+//                onLap = stopwatchEventCallbacks::lapStopwatch
+//            )
+//        }
     }
 }

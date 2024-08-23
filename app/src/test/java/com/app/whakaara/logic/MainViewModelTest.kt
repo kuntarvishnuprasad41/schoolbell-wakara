@@ -78,7 +78,7 @@ class MainViewModelTest {
                     set(Calendar.MINUTE, 34)
                     set(Calendar.SECOND, 0)
                 },
-                title = "First Alarm Title",
+                title = "First Bell Title",
                 subTitle = "14:34 PM"
             ),
             Alarm(
@@ -90,7 +90,7 @@ class MainViewModelTest {
                     set(Calendar.MINUTE, 34)
                     set(Calendar.SECOND, 0)
                 },
-                title = "Second Alarm Title",
+                title = "Second Bell Title",
                 subTitle = "14:34 PM"
             )
         )
@@ -159,12 +159,12 @@ class MainViewModelTest {
                 assertEquals(2, this.alarms.size)
 
                 this.alarms[0].apply {
-                    assertEquals("First Alarm Title", this.title)
+                    assertEquals("First Bell Title", this.title)
                     assertEquals("14:34 PM", this.subTitle)
                 }
 
                 this.alarms[1].apply {
-                    assertEquals("Second Alarm Title", this.title)
+                    assertEquals("Second Bell Title", this.title)
                     assertEquals("14:34 PM", this.subTitle)
                 }
             }

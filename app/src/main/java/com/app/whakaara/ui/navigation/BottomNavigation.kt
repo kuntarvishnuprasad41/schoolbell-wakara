@@ -18,8 +18,8 @@ import com.app.whakaara.ui.theme.WhakaaraTheme
 fun BottomNavigation(navController: NavController) {
     val navItems = listOf(
         BottomNavItem.Alarm,
-        BottomNavItem.Timer,
-        BottomNavItem.Stopwatch
+//        BottomNavItem.Timer,
+//        BottomNavItem.Stopwatch
     )
 
     NavigationBar(

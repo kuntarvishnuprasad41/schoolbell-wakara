@@ -85,12 +85,12 @@ fun SettingsScreen(
                         updateCurrentAlarmsToAddOrRemoveUpcomingAlarmNotification = updateCurrentAlarmsToAddOrRemoveUpcomingAlarmNotification
                     )
                 }
-                BottomNavItem.Timer.route -> {
-                    TimerSettings(
-                        preferencesState = preferencesState,
-                        updatePreferences = updatePreferences
-                    )
-                }
+//                BottomNavItem.Timer.route -> {
+//                    TimerSettings(
+//                        preferencesState = preferencesState,
+//                        updatePreferences = updatePreferences
+//                    )
+//                }
             }
         }
     }

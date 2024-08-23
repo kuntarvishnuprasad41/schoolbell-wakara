@@ -8,11 +8,11 @@ import androidx.compose.material.icons.outlined.Timer
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class BottomNavItem(var title: String, var icon: ImageVector, var route: String) {
-    data object Alarm : BottomNavItem(title = "Alarm", icon = Icons.Outlined.Alarm, route = "alarm")
+    data object Alarm : BottomNavItem(title = "", icon = Icons.Outlined.HourglassEmpty, route = "alarm")
 
-    data object Settings : BottomNavItem(title = "Settings", icon = Icons.Outlined.Settings, route = "settings")
+    data object Settings : BottomNavItem(title = "Settings", icon = Icons.Outlined.HourglassEmpty, route = "settings")
 
-    data object Timer : BottomNavItem(title = "Timer", icon = Icons.Outlined.HourglassEmpty, route = "timer")
+//    data object Timer : BottomNavItem(title = "Timer", icon = Icons.Outlined.HourglassEmpty, route = "timer")
 
-    data object Stopwatch : BottomNavItem(title = "Stopwatch", icon = Icons.Outlined.Timer, route = "stopwatch")
+//    data object Stopwatch : BottomNavItem(title = "Stopwatch", icon = Icons.Outlined.Timer, route = "stopwatch")
 }

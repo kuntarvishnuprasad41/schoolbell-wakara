@@ -42,7 +42,7 @@ class BottomSheetAlarmDetailsTest {
                         ),
                         updateCheckedList = ListStateEvent(),
                         updateTitle = StringStateEvent(
-                            value = "Alarm"
+                            value = "Bell"
                         )
                     )
                 )
@@ -51,31 +51,31 @@ class BottomSheetAlarmDetailsTest {
 
         // Then
         onNodeWithText(text = "Vibrate").assertIsDisplayed()
-        onNodeWithText(text = "Vibrate on alarm").assertIsDisplayed()
+        onNodeWithText(text = "Vibrate on Bell").assertIsDisplayed()
         onNodeWithTag(testTag = "vibrate switch")
             .assertIsDisplayed()
             .assertIsToggleable()
             .assertIsOff()
 
         onNodeWithText(text = "Snooze").assertIsDisplayed()
-        onNodeWithText(text = "Snooze on alarm").assertIsDisplayed()
+        onNodeWithText(text = "Snooze on Bell").assertIsDisplayed()
         onNodeWithTag(testTag = "snooze switch")
             .assertIsDisplayed()
             .assertIsToggleable()
             .assertIsOn()
 
         onNodeWithText(text = "Single-use").assertIsDisplayed()
-        onNodeWithText(text = "Alarm will delete after going off").assertIsDisplayed()
+        onNodeWithText(text = "Bell will delete after going off").assertIsDisplayed()
         onNodeWithTag(testTag = "delete switch")
             .assertIsDisplayed()
             .assertIsToggleable()
             .assertIsOff()
 
         onNodeWithText("Repeating").assertIsDisplayed()
-        onNodeWithText("Alarm will repeat daily").assertIsDisplayed()
+        onNodeWithText("Bell will repeat daily").assertIsDisplayed()
 
         onNodeWithText("Custom").assertIsDisplayed()
-        onNodeWithText("Select certain days to repeat alarm").assertIsDisplayed()
+        onNodeWithText("Select certain days to repeat Bell").assertIsDisplayed()
 
         onAllNodesWithTag(testTag = "segmentedButton", useUnmergedTree = true)
             .apply {
@@ -85,7 +85,7 @@ class BottomSheetAlarmDetailsTest {
             }
 
         onNodeWithText(text = "Title").assertIsDisplayed()
-        onNodeWithText(text = "Alarm").assertIsDisplayed()
+        onNodeWithText(text = "Bell").assertIsDisplayed()
         onNodeWithText(text = "5 / 20").assertIsDisplayed()
     }
 }

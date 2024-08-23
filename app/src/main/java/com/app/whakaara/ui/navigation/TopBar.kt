@@ -40,12 +40,13 @@ fun TopBar(
     TopAppBar(
         title = {
             Text(
-                text = route.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+//                text = route.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+                text = "A.U.P.S"
             )
         },
         actions = {
             when (route) {
-                BottomNavItem.Alarm.route, BottomNavItem.Timer.route -> {
+                BottomNavItem.Alarm.route, BottomNavItem.Settings.route -> {
                     IconButton(
                         onClick = {
                             scope.launch { sheetState.expand() }
